@@ -62,12 +62,12 @@ ex.1: show ip int brief
 #!/usr/bin/env python
 import cli
 
-commands = [
+mycmd1 = [
     "show ip int brief",
 ]
 
-for c in commands:
-    cli.executep(c)
+for k in mycmd1:
+    cli.executep(k)
 	
 	
 ex.2 show version
