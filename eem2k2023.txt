@@ -44,8 +44,8 @@ R1#
 A user executed script that prompts you for a number of loopbacks to create.
 
 config t
-no event manager applet CreateLoopbacks
-event manager applet CreateLoopbacks
+no event manager applet gawaloop
+event manager applet gawaloop
  event none
  action 1.0 puts "How many Loopback interfaces do you wish to create?"
  action 1.1 puts nonewline "> "
@@ -65,8 +65,8 @@ event manager run CreateLoopbacks
 
 removing loopbacks:
 config t
-no event manager applet RemoveLoopbacks
-event manager applet RemoveLoopbacks
+no event manager applet siraloop
+event manager applet siraloop
  event none
  action 1.0 puts "How many Loopback interfaces do you wish to create?"
  action 1.1 puts nonewline "> "
