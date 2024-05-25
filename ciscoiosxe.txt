@@ -1,0 +1,78 @@
+https://github.com/GShuttleworth/Cisco-IOS-XE-config-to-Git
+
+task1:
+
+show iox-service
+
+show app-hosting list
+
+task2: talk to python:
+
+guestshell run python3
+print("hello")
+import sys
+>>> print(sys.version)
+3.6.8 (default, Nov 21 2019, 19:31:34) 
+[GCC 8.3.1 20190507 (Red Hat 8.3.1-4)]
+
+>>> cli.cli('show version')
+'Cisco IOS XE Software, Version 17.03.08\
+
+>>> from cli import clip
+>>> cli.clip('show version')
+Cisco IOS XE Software, Version 17.03.08
+Cisco IOS Software [Amsterdam], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 17.3.8, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2023 by Cisco Systems, Inc.
+Compiled Fri 29-Sep-23 03:09 by mcpre
+Cisco IOS-XE software, Copyright (c) 2005-2023 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  
+
+
+cli.configure(["interface loopback 99", "ip address 99.99.99.99 255.255.255.255", "end"])
+
+cli.configure(["hostname ChangeME","ip dhcp pool BOTOT2", "network 10.2.2.0 255.255.255.0", "end"])
+
+cli.clip('sh ip int br')
+
+task1: talk to BASH:
+
+guestshell run bash
+guestshell run python3 /bootflash/guest-share/configme1.py
+
+vi
+import cli
+
+cfg1 = '''hostname CiscoPY
+ip dhcp excluded-add 192.168.102.1 192.168.102.100
+ip dhcp pool DHCPGI2
+network 192.168.102.0 255.255.255.0
+default-router 192.168.102.8
+domain-name rivanit.com
+dns-server 1.1.1.1
+end
+'''
+
+cli.configurep(cfg1)
+
+sudo su
+ls /bootflash/
+
+@update the ios-xe repos:
+
+FROM centos
+
+cd /etc/yum.repos.d/
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
+yum -y install java
+
+CMD /bin/bash
+
+wget 'http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os/Packages/centos-gpg-keys-8-3.el8.noarch.rpm'
+sudo rpm -i 'centos-gpg-keys-8-3.el8.noarch.rpm'
+
+dnf --disablerepo '*' --enablerepo=extras swap centos-linux-repos centos-stream-repos
+
