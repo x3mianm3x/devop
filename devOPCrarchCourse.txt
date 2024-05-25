@@ -28,7 +28,7 @@ permit 192.168.0.0 0.0.255.255
 !
 app-hosting appid guestshell
  app-vnic gateway1 virtualportgroup 0 guest-interface 0
-    guest-ipaddress 192.168.35.2 netmask 255.255.255.0	
+    guest-ipaddress 192.168.35.3 netmask 255.255.255.0	
 	app-default-gateway 192.168.35.1  guest-interface 0 
 	name-server0 1.1.1.1
  app-resource profile custom 
