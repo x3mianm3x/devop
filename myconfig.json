@@ -1,0 +1,44 @@
+{
+   "ietf-interfaces:interface": {
+      "name": "Loopback3",
+      "description": "MadeBy Robert!",
+      "type": "iana-if-type:softwareLoopback",
+      "enabled": true,
+      "ietf-ip:ipv4": {
+           "address": [
+               {
+                "ip": "3.3.3.3",
+                "netmask": "255.255.255.255"
+               }
+           ]
+      }
+   },
+   "ietf-interfaces:interface": {
+    "name": "Loopback4",
+    "description": "MadeBy Robert!",
+    "type": "iana-if-type:softwareLoopback",
+    "enabled": true,
+    "ietf-ip:ipv4": {
+         "address": [
+             {
+              "ip": "4.4.4.4",
+              "netmask": "255.255.255.255"
+             }
+         ]
+    }
+ },
+ "ietf-interfaces:interface": {
+    "name": "Loopback5",
+    "description": "MadeBy Robert!",
+    "type": "iana-if-type:softwareLoopback",
+    "enabled": true,
+    "ietf-ip:ipv4": {
+         "address": [
+             {
+              "ip": "5.5.5.5",
+              "netmask": "255.255.255.255"
+             }
+         ]
+    }
+ }
+}
